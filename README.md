@@ -64,7 +64,8 @@ Kiểm tra kỹ thông tin kết nối cơ sở dữ liệu trong file .env đ�
 
 # Một số trang demo
 ## Trang chủ
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/21dbabea-e4de-4a3e-a8d8-3be9f8bd03d7)
+
 
 
 ## Trang giỏ hàng sau khi thêm sản phẩm 
