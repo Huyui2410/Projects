@@ -42,6 +42,17 @@ return new class extends Migration {
             $table->timestamps();
         });
 
+        Schema::create('giohang', function (Blueprint $table) {
+            $table->id();
+            $table->integer('iduser');
+            $table->integer('TongSL');
+            $table->integer('TongGia');
+            $table->double('TongTien');
+            $table->string('NgayLap');
+            $table->timestamps();
+            $table->tinyInteger('TrangThai');
+        });
+
         Schema::create('chitietdonhang', function (Blueprint $table) {
             $table->integer('MaDH');
             $table->integer('MaSP');
@@ -59,6 +70,16 @@ return new class extends Migration {
             $table->timestamps();
             $table->foreign('MaGH')->references('id')->on('giohang');
         });
+        Schema::create('hoadon', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id ');
+            $table->string('hoten');
+            $table->integer('sdt');
+            $table->string('diachi');
+            $table->integer('thanhtien');
+            $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+        });
         Schema::create('chitiethoadon', function (Blueprint $table) {
             $table->id();
             $table->integer('id_hoadon ')->unsigned();
@@ -70,26 +91,8 @@ return new class extends Migration {
             $table->timestamps();
             $table->foreign('id_hoadon')->references('id')->on('hoadon');
         });
-        Schema::create('giohang', function (Blueprint $table) {
-            $table->id();
-            $table->integer('iduser');
-            $table->integer('TongSL');
-            $table->integer('TongGia');
-            $table->double('TongTien');
-            $table->string('NgayLap');
-            $table->timestamps();
-            $table->tinyInteger('TrangThai');
-        });
-        Schema::create('hoadon', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id ');
-            $table->string('hoten');
-            $table->integer('sdt');
-            $table->string('diachi');
-            $table->integer('thanhtien');
-            $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
-        });
+
+
         Schema::create('loaisanpham', function (Blueprint $table) {
             $table->id();
             $table->string('tenloai ');
