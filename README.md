@@ -38,10 +38,10 @@ Mở file .env và cấu hình các thông tin kết nối cơ sở dữ liệu 
     DB_USERNAME=your_database_username
     DB_PASSWORD=your_database_password
 3. Import File SQL
-Tải lên file SQL mà bạn đã tải lên (freshop (2).sql) vào cơ sở dữ liệu của bạn(import).
+Tải lên file SQL mà bạn đã tải lên (freshop (3).sql) vào cơ sở dữ liệu của bạn(import).
 Bạn có thể sử dụng phpMyAdmin hoặc MySQL Workbench để import file này.Nếu sử dụng dòng lệnh MySQL, chạy:
     ```bash
-    mysql -u your_database_username -p your_database_name < /path/to/freshop\ (2).sql
+    mysql -u your_database_username -p your_database_name < /path/to/freshop\ (3).sql
 
 #### Thay /path/to/ bằng đường dẫn thực tế đến file SQL.
 
