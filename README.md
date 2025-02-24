@@ -69,25 +69,31 @@ Kiểm tra kỹ thông tin kết nối cơ sở dữ liệu trong file .env đ�
 
 
 ## Trang giỏ hàng sau khi thêm sản phẩm 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/917a475c-52ce-4599-a255-fac272cc305b)
+
 
 ## Trang đăng kí tài khoản
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/3201fc4a-0032-4be2-a226-25942d4b5e96)
+
 
 ## Trang đặt đơn hàng
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/33acfd96-3b6d-4beb-99a7-f068a5baacdf)
+
 
 ## Trang hóa đơn đặt hàng và chi tiết 
 
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/5724bc9b-a022-4bb8-bb58-ba50b8e081dc)
+
 
 # Trang panel của admin (chỉ tài khoản admin mới vào được)
 ### Email: admin@gmail.com
 ### Password: 12345678
-![alt text](image-10.png)
+![image](https://github.com/user-attachments/assets/9b41a9e2-8d50-4c72-9af2-ed9e89b791be)
+
 
 ## Trang CRUD sản phẩm
-![alt text](image-11.png)
+![image](https://github.com/user-attachments/assets/3ab86ed2-ab82-4f31-8955-be3ee2a93238)
+
 
 # 📝Và còn nhiều trang khác nữa đang chờ bạn khám phá!
 
