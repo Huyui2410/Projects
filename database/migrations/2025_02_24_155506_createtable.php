@@ -54,12 +54,11 @@ return new class extends Migration {
         });
         Schema::create('chitietgiohang', function (Blueprint $table) {
             $table->id();
-            $table->integer('MaGH');
             $table->integer('MaSP');
             $table->integer('SoLuong');
             $table->integer('Gia');
             $table->timestamps();
-            $table->foreign('MaGH')->references('id')->on('giohang');
+            $table->foreignId('MaGH')->references('id')->on('giohang');
         });
 
         Schema::create('chitietdonhang', function (Blueprint $table) {
@@ -72,30 +71,28 @@ return new class extends Migration {
 
         Schema::create('hoadon', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id ');
             $table->string('hoten');
             $table->integer('sdt');
             $table->string('diachi');
             $table->integer('thanhtien');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users');
         });
         Schema::create('chitiethoadon', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_hoadon ')->unsigned();
             $table->integer('ProductId');
             $table->string('SoLuong');
             $table->string('Gia');
             $table->integer('ThanhTien');
             $table->string('TrangThai');
             $table->timestamps();
-            $table->foreign('id_hoadon')->references('id')->on('hoadon');
+            $table->foreignId('id_hoadon')->references('id')->on('hoadon');
         });
 
 
         Schema::create('loaisanpham', function (Blueprint $table) {
             $table->id();
-            $table->string('tenloai ');
+            $table->string('tenloai');
             $table->string('trangthai');
             $table->timestamps();
         });
