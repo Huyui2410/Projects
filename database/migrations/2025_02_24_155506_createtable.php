@@ -52,15 +52,6 @@ return new class extends Migration {
             $table->timestamps();
             $table->tinyInteger('TrangThai');
         });
-
-        Schema::create('chitietdonhang', function (Blueprint $table) {
-            $table->integer('MaDH');
-            $table->integer('MaSP');
-            $table->integer('SoLuong');
-            $table->integer('Gia');
-            $table->timestamps();
-        });
-
         Schema::create('chitietgiohang', function (Blueprint $table) {
             $table->id();
             $table->integer('MaGH');
@@ -70,6 +61,15 @@ return new class extends Migration {
             $table->timestamps();
             $table->foreign('MaGH')->references('id')->on('giohang');
         });
+
+        Schema::create('chitietdonhang', function (Blueprint $table) {
+            $table->integer('MaDH');
+            $table->integer('MaSP');
+            $table->integer('SoLuong');
+            $table->integer('Gia');
+            $table->timestamps();
+        });
+
         Schema::create('hoadon', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id ');
