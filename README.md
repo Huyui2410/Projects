@@ -1,7 +1,4 @@
-# 🚀 FreshShop - Ứng Dụng Bán Rau Củ Quả Tươi
-
-## 📌 Giới thiệu
-FreshShop là một ứng dụng web được xây dựng bằng PHP/Laravel dành cho các cửa hàng kinh doanh rau củ quả tươi. Dự án này giúp người dùng dễ dàng mua sắm thực phẩm sạch trực tuyến, đồng thời hỗ trợ quản trị viên trong việc quản lý sản phẩm, đơn hàng và khách hàng.
+ # Hướng Dẫn Clone Dự Án Laravel và Cấu Hình
 
 ## 📋 Yêu Cầu Hệ Thống
 Trước khi bắt đầu, bạn cần cài đặt các công cụ sau:
@@ -11,109 +8,94 @@ Trước khi bắt đầu, bạn cần cài đặt các công cụ sau:
 - **[Composer](https://getcomposer.org/)**: Trình quản lý phụ thuộc cho PHP.
 - **[Xampp](https://www.apachefriends.org/download.html)**: Chạy local.
 
-## 📖 Mục lục
-- [📌 Giới thiệu](#-giới-thiệu)
-- [📋 Yêu Cầu Hệ Thống](#-yêu-cầu-hệ-thống)
-- [📂 Cấu trúc dự án](#-cấu-trúc-dự-án)
-- [🚀 Các Bước Cài Đặt Dự Án](#-các-bước-cài-đặt-dự-án)
-- [🎮 Một số trang demo](#-một-số-trang-demo)
-- [📜 Giấy phép](#-giấy-phép)
-
-## 📂 Cấu trúc dự án
-```
-FreshShop/
-├── 📁 app/                # Code chính của ứng dụng Laravel
-├── 📁 bootstrap/          # Tệp khởi động
-├── ⚙️ config/             # Cấu hình ứng dụng
-├── 📁 database/           # Cấu trúc cơ sở dữ liệu
-├── 🌍 public/             # Thư mục chứa tài nguyên công khai (CSS, JS, hình ảnh...)
-├── 🎨 resources/          # Giao diện người dùng (Blade templates, CSS, JS...)
-├── 🔀 routes/             # Định tuyến ứng dụng
-├── 🗄️ storage/            # Thư mục chứa dữ liệu tạm thời, cache, logs...
-├── ✅ tests/              # Kiểm thử ứng dụng
-├── 📄 .env.example        # Mẫu tệp cấu hình môi trường
-├── 🎵 composer.json       # Quản lý thư viện PHP
-└── 📖 README.md           # Tài liệu hướng dẫn sử dụng dự án
-```
-
 ## 🚀 Các Bước Cài Đặt Dự Án
 
-### 1️⃣ Clone Dự Án Từ GitHub
+### 1. Clone Dự Án Từ GitHub
 1. Truy cập vào [GitHub Repository](https://github.com/Huyui2410/Projects).
 2. Nhấn vào nút **"Code"** và sao chép đường dẫn **HTTPS**.
 3. Mở terminal và di chuyển đến thư mục bạn muốn clone dự án vào.
 4. Chạy lệnh sau để clone dự án:
-   ```bash 
+   
+bash 
    git clone https://github.com/Huyui2410/Projects.git
-   ```
 5. Di chuyển vào thư mục dự án:
-   ```bash
-   cd FreshShop
-   ```
-
-### 2️⃣ Cài Đặt Các Phụ Thuộc
-1. Cài đặt các thư viện PHP:
-   ```bash
-   composer install
-   composer update
-   ```
-
-### 3️⃣ Cấu Hình Cơ Sở Dữ Liệu
-1. Tạo File `.env` từ file mẫu `.env.example` bằng lệnh:
-   ```bash
-   cp .env.example .env
-   ```
+bash
+    cd Projects
+### 2. Cài Đặt Các Phụ Thuộc
+1. Cài đặt các thư viện PHP: Trong thư mục dự án, chạy lệnh sau:
+    
+bash
+    composer install
+### 3. Cấu Hình Cơ Sở Dữ Liệu
+1. Tạo File .env từ file mẫu .env.example bằng lệnh:
+bash
+    cp .env.example .env
 2. Cấu Hình Kết Nối Cơ Sở Dữ Liệu
-   Mở file `.env` và cấu hình các thông tin kết nối cơ sở dữ liệu như sau:
-   ```bash
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=freshshop_db
-   DB_USERNAME=root
-   DB_PASSWORD=
-   ```
+Mở file .env và cấu hình các thông tin kết nối cơ sở dữ liệu như sau:
+    
+bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_database_username
+    DB_PASSWORD=your_database_password
 3. Import File SQL
-   ```bash
-   mysql -u root -p freshshop_db < freshshop.sql
-   ```
+Tải lên file SQL mà bạn đã tải lên (freshop (3).sql) vào cơ sở dữ liệu của bạn(import).
+Bạn có thể sử dụng phpMyAdmin hoặc MySQL Workbench để import file này.Nếu sử dụng dòng lệnh MySQL, chạy:
+bash
+    mysql -u your_database_username -p your_database_name < /path/to/freshop\ (3).sql
 
-### 4️⃣ Tạo Khóa Ứng Dụng
+#### Thay /path/to/ bằng đường dẫn thực tế đến file SQL.
+
+### 4. Tạo Khóa Ứng Dụng
 1. Chạy lệnh sau để tạo khóa ứng dụng:
-   ```bash
-   php artisan key:generate
-   ```
-
-### 5️⃣ Chạy Ứng Dụng
+    
+bash
+    php artisan key:generate
+### 5. Chạy Ứng Dụng
 1. Chạy ứng dụng trên server phát triển:
-   ```bash
-   php artisan serve
-   ```
-   Ứng dụng của bạn sẽ chạy tại `http://localhost:8000`.
+bash
+    php artisan serve
+Ứng dụng của bạn sẽ chạy tại http://localhost:8000.
 
-## 🛠 Hướng Dẫn Debug Lỗi
-- **Lỗi thiếu file `.env`**: Chạy `cp .env.example .env` rồi `php artisan key:generate`.
-- **Lỗi quyền truy cập thư mục `storage` hoặc `bootstrap/cache`**:
-  ```bash
-  chmod -R 777 storage bootstrap/cache
-  ```
-- **Lỗi không kết nối được MySQL**: Kiểm tra lại thông tin `.env` hoặc đảm bảo MySQL đang chạy.
+⚠️ Lưu Ý
+Nếu dự án yêu cầu các dữ liệu khác hoặc cấu hình thêm, bạn có thể tham khảo tài liệu đi kèm trong repository hoặc yêu cầu thêm trợ giúp.
 
-## 🎮 Một số trang demo
-### 📌 Trang chủ
+Kiểm tra kỹ thông tin kết nối cơ sở dữ liệu trong file .env để đảm bảo không bị lỗi kết nối.
+
+📝 Chúc bạn thành công với việc triển khai dự án Laravel này! 🎉
+# Một số trang demo
+## Trang chủ
 ![image](https://github.com/user-attachments/assets/21dbabea-e4de-4a3e-a8d8-3be9f8bd03d7)
 
-### 🛒 Trang giỏ hàng
+
+
+## Trang giỏ hàng sau khi thêm sản phẩm 
 ![image](https://github.com/user-attachments/assets/917a475c-52ce-4599-a255-fac272cc305b)
 
-### 🔐 Trang đăng kí tài khoản
+
+## Trang đăng kí tài khoản
 ![image](https://github.com/user-attachments/assets/3201fc4a-0032-4be2-a226-25942d4b5e96)
 
-### 🛠️ Trang CRUD sản phẩm
+
+## Trang đặt đơn hàng
+![image](https://github.com/user-attachments/assets/33acfd96-3b6d-4beb-99a7-f068a5baacdf)
+
+
+## Trang hóa đơn đặt hàng và chi tiết 
+
+![image](https://github.com/user-attachments/assets/5724bc9b-a022-4bb8-bb58-ba50b8e081dc)
+
+
+# Trang panel của admin (chỉ tài khoản admin mới vào được)
+### Email: admin@gmail.com
+### Password: 12345678
+![image](https://github.com/user-attachments/assets/9b41a9e2-8d50-4c72-9af2-ed9e89b791be)
+
+
+## Trang CRUD sản phẩm
 ![image](https://github.com/user-attachments/assets/3ab86ed2-ab82-4f31-8955-be3ee2a93238)
 
-## 📜 Giấy phép
-Dự án này tuân theo giấy phép MIT.
 
-📝 Chúc bạn thành công với việc triển khai FreshShop! 🥦🥕
-
+# 📝Và còn nhiều trang khác nữa đang chờ bạn khám phá!
