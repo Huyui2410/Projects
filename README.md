@@ -4,6 +4,11 @@
 FreshShop là một nền tảng thương mại điện tử chuyên biệt dành cho các cửa hàng bán rau củ quả tươi. Với giao diện trực quan, dễ sử dụng, FreshShop giúp khách hàng dễ dàng đặt mua thực phẩm sạch chỉ với vài cú nhấp chuột. Ngoài ra, hệ thống còn cung cấp công cụ quản lý sản phẩm, đơn hàng, khách hàng một cách hiệu quả, hỗ trợ các chủ cửa hàng trong việc tối ưu hóa quy trình kinh doanh. 
 
 Bạn đang tìm kiếm một giải pháp bán hàng online cho thực phẩm sạch? FreshShop chính là lựa chọn hoàn hảo để bạn tiếp cận khách hàng nhanh chóng, chuyên nghiệp và tiện lợi hơn bao giờ hết! 🥦🍅
+## Sơ đồ chức năng
+### Use-Case diagram
+![image](https://github.com/user-attachments/assets/9fbd5ce3-cab8-4df7-ab67-afdf933a67d0)
+### Activity diagram
+![image](https://github.com/user-attachments/assets/002c228f-fe65-4ccc-987f-428d07add2e6)
 
 ## 🎮 Sử dụng
 ### 👥 Người dùng
